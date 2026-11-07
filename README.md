@@ -1,6 +1,6 @@
 # eppure_linkedin_skills – Skill LinkedIn per Claude
 
-Cinque skill in italiano per lavorare su LinkedIn con Claude, più una skill generica per il giornale PDF di marca. Ognuna è una cartella in `skills/` con un `SKILL.md`: istruzioni che Claude legge e segue quando le richiami.
+Cinque skill in italiano per lavorare su LinkedIn con Claude, più una skill di strategia video e una generica per il giornale PDF di marca. Ognuna è una cartella in `skills/` con un `SKILL.md`: istruzioni che Claude legge e segue quando le richiami.
 
 Tutte chiedono all'utente di caricare logo e immagini da usare e non rigenerano né alterano mai un logo esistente. Nessuna contiene dati di un cliente specifico.
 
@@ -13,6 +13,7 @@ Tutte chiedono all'utente di caricare logo e immagini da usare e non rigenerano 
 | [`linkedin-articoli-da-sito`](skills/linkedin-articoli-da-sito/SKILL.md) | Articoli o newsletter LinkedIn con Tone of Voice e argomento presi da un sito di riferimento. |
 | [`linkedin-piano-editoriale`](skills/linkedin-piano-editoriale/SKILL.md) | Piano editoriale (1 post al giorno + 1 articolo a settimana), bozze, immagini con ChatGPT o Nano Banana, pubblicazione via Chrome con conferma. |
 | [`linkedin-prospezione-pmi`](skills/linkedin-prospezione-pmi/SKILL.md) | Individua titolari di PMI e decisori a cui proporre i tuoi servizi: lavoro a lotti piccoli, griglia di punteggio, bozze di contatto, nessuna azione senza conferma e limiti pensati per non mettere a rischio l'account. |
+| [`strategia-video-organico`](skills/strategia-video-organico/SKILL.md) | Strategia di digital marketing e piano di video organici (Reels, TikTok, LinkedIn, Shorts): questionario, pilastri, calendario, schede con copioni. Generazione dei video con Higgsfield, se collegato. |
 | [`giornale-di-marca`](skills/giornale-di-marca/SKILL.md) | Giornale PDF personale con l'identità di un marchio (logo, palette, font, voce), personalizzato con un questionario. Si appoggia alla skill `leaderai-giornale`, che va installata a parte. |
 
 ## Come installare
@@ -79,6 +80,7 @@ Dopo l'installazione richiama la skill per nome, in italiano, descrivendo cosa v
 | Scrivere un articolo | «Usa linkedin-articoli-da-sito: prendi il tono da questo sito e scrivi un articolo su …» |
 | Pianificare i contenuti | «Usa linkedin-piano-editoriale: prepara il calendario di 30 giorni, un post al giorno e un articolo a settimana.» |
 | Cercare clienti tra i titolari di PMI | «Usa linkedin-prospezione-pmi per cercare …» |
+| Pianificare video organici | «Usa strategia-video-organico per il marchio …» |
 | Fare un giornale di marca | «Usa giornale-di-marca per il marchio …» (serve prima `leaderai-giornale`) |
 
 ### Cosa serve per le funzioni avanzate
