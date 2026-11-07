@@ -50,8 +50,9 @@ Per ogni profilo raccogli, dalla pagina pubblica visibile all'utente:
 
 Controlla l'azienda **prima** di leggere post e attività: se è fuori target, scarta il profilo e risparmi pagine su LinkedIn. Fonti, in ordine:
 
+0. **API Openapi (solo se disponibile).** Openapi (openapi.com) offre un'API a pagamento sulle imprese italiane, con dati ufficiali da Registro Imprese e bilanci: fatturato, utili, numero di dipendenti, stato attivo/non attivo. Usala **solo se** l'utente ha un account e le credenziali sono già disponibili in modo sicuro (variabili d'ambiente o un connettore) e c'è uno strumento che può chiamarla; altrimenti salta questo punto senza insistere. Non chiedere di incollare token o chiavi in chat, non scriverli in file e non stamparli. Cerca per partita IVA o denominazione e provincia (servizio `IT-advanced` sul host `company.openapi.com`; per prove c'è l'ambiente di test `test.company.openapi.com`). Controlla nella documentazione di Openapi campi, limiti e costi per chiamata prima di usarla, e informa l'utente del costo prima di un lotto. Un dato da Openapi vale come fonte ufficiale: con una sola fonte, se recente (ultimo bilancio depositato), l'affidabilità è **confermata**. Usa solo i servizi su **imprese**, mai quelli su persone.
 1. **Pagina aziendale LinkedIn**: fascia dichiarata (es. "11-50") e numero di persone che la indicano come datore di lavoro. Il numero di persone è un **minimo**: se supera la fascia, la fascia è sbagliata.
-2. **Ricerca web** (WebSearch, non il browser di LinkedIn): `<ragione sociale> <città> fatturato dipendenti`. Esistono portali che ripubblicano i dati del Registro Imprese (es. aziende.it, la parte pubblica di Atoka, Ufficio Camerale). Usa il **fatturato** come riscontro principale: i dati sui dipendenti dei portali gratuiti sono spesso a fasce, datati o incoerenti (in un test la stessa pagina riportava 0-9 dipendenti in tabella e 20-49 nel testo). Riferimento: piccola impresa sotto 50 dipendenti e 10 milioni di fatturato; media sotto 250 dipendenti e 50 milioni.
+2. **Ricerca web** (WebSearch, non il browser di LinkedIn): `<ragione sociale> <città> fatturato dipendenti`. Se Openapi non è disponibile, esistono portali che ripubblicano i dati del Registro Imprese (es. aziende.it, la parte pubblica di Atoka, Ufficio Camerale). Usa il **fatturato** come riscontro principale: i dati sui dipendenti dei portali gratuiti sono spesso a fasce, datati o incoerenti (in un test la stessa pagina riportava 0-9 dipendenti in tabella e 20-49 nel testo). Riferimento: piccola impresa sotto 50 dipendenti e 10 milioni di fatturato; media sotto 250 dipendenti e 50 milioni.
 3. **Sito aziendale**: pagina del team, "chi siamo", offerte di lavoro.
 
 Per ogni azienda registra la dimensione, la fonte e un grado di affidabilità:
@@ -107,7 +108,7 @@ Dopo ogni lotto chiedi se continuare, fino al limite giornaliero. Alla ripresa, 
 
 ## Alternative meno rischiose per trovare le aziende
 
-Se serve volume, trova le **aziende** fuori da LinkedIn (registro imprese, siti aziendali, Google Maps, elenchi di associazioni di categoria) e usa LinkedIn solo per individuare il titolare di quelle aziende, una per volta. Riduce le ricerche su LinkedIn e migliora la qualità del target.
+Se serve volume, trova le **aziende** fuori da LinkedIn (registro imprese, siti aziendali, Google Maps, elenchi di associazioni di categoria; con Openapi anche il servizio di ricerca `IT-search` per provincia e codice ATECO) e usa LinkedIn solo per individuare il titolare di quelle aziende, una per volta. Riduce le ricerche su LinkedIn e migliora la qualità del target.
 
 ## Cose da non fare
 
